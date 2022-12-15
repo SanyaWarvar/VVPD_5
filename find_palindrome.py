@@ -59,27 +59,32 @@ def find_palindrome(palindrome, iteration_count=50):
     :type palindrome: str, int
     :param iteration_count: количетсво итераций для поиска палиндрома
     :type iteration_count: int
+
+    Raises:
+        ValueError - если palindrome не является строкой, состоящей только из чисел
+        (например, строка 'asd' вызовет исключение)
+
     :return: Истина, если палиндром найден, иначе ложь
              Ложь, если palindrome  - пустая строка
-
-    >>> find_palindrome('2454543')
-    Палиндром - 19899891. Число итераций: 3
-    True
-    >>> find_palindrome("")
-    Вы ввели пустую строку
-    False
-    >>> find_palindrome("2")
-    Палиндром - 2. Число итераций: 0
-    True
-    >>> find_palindrome("196")
-    Палиндром не найден
-    False
-    >>> find_palindrome("22")
-    Палиндром - 22. Число итераций: 0
-    True
-    >>> find_palindrome(123)
-    Палиндром - 444. Число итераций: 1
-    True
+    Examples:
+        >>> find_palindrome('2454543')
+        Палиндром - 19899891. Число итераций: 3
+        True
+        >>> find_palindrome("")
+        Вы ввели пустую строку
+        False
+        >>> find_palindrome("2")
+        Палиндром - 2. Число итераций: 0
+        True
+        >>> find_palindrome("196")
+        Палиндром не найден
+        False
+        >>> find_palindrome("22")
+        Палиндром - 22. Число итераций: 0
+        True
+        >>> find_palindrome(123)
+        Палиндром - 444. Число итераций: 1
+        True
 
     """
     if palindrome == "":
